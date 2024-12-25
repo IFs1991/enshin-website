@@ -1,13 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
-  experimental: {
-    outputStandalone: true,
-  },
-  // Docker環境でのホスト設定
-  webServer: {
-    hostname: '0.0.0.0',
-  },
+  // Vercelデプロイ用の設定
+  swcMinify: true,
 }
 
 module.exports = nextConfig
