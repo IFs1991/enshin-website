@@ -1,132 +1,68 @@
 'use client'
-import React, { useState } from 'react'
-import { Calendar } from '@/components/ui/calendar'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
-import { Checkbox } from '@/components/ui/checkbox'
+import React from 'react'
 
 const ReservationPage = () => {
-  // 予約フォームの状態管理
-  const [date, setDate] = useState<Date | undefined>(new Date())
-  const [agreed, setAgreed] = useState(false)
-  const [selectedService, setSelectedService] = useState("")
-  const [selectedTime, setSelectedTime] = useState("")
-
-  // フォーム送信時の処理
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    // フォームデータの処理をここに実装
-    console.log({
-      service: selectedService,
-      date: date,
-      time: selectedTime,
-      agreed: agreed
-    })
-  }
-
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* ページタイトル */}
-      <h1 className="text-3xl font-bold mb-8 text-center">予約</h1>
+      {/* ページヘッダー - 予約ページのメインタイトル */}
+      <h1 className="text-3xl font-bold mb-8 text-center">施術予約</h1>
 
-      {/* 予約フォーム */}
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-        {/* 基本情報入力セクション */}
-        <div className="mb-4">
-          <Label htmlFor="name">お名前</Label>
-          <Input type="text" id="name" required />
+      {/* 予約システムの説明セクション - ユーザーへの重要な案内事項 */}
+      <div className="max-w-2xl mx-auto mb-8 text-gray-600">
+        <p className="mb-4">
+          ご予約は下記フォームより24時間受け付けております。
+          必要事項をご記入の上、送信ボタンをクリックしてください。
+          ご予約確認後、自動返信メールをお送りいたします。
+        </p>
+        <p className="mb-4">
+          なお、メールが届かない場合は、お手数ですが直接お電話にてご連絡ください。
+          前日・当日のキャンセルはご遠慮いただいております。
+        </p>
+      </div>
+
+      {/* Google Formsの埋め込みセクション - モダンなスタイリングとアクセシビリティ対応 */}
+      <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-6">
+        <div className="relative w-full">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLScE8SRvAezLyrNfic7PWyzywPVO_oNllCJgaqznlZUWu6_cJA/viewform?embedded=true"
+            className="w-full min-h-[2310px] border-0"
+            title="予約フォーム"
+            aria-label="予約フォーム"
+          >
+            読み込んでいます...
+          </iframe>
+        </div>
+      </div>
+
+      {/* 注意事項と補足情報セクション - 明確な構造化とアクセシビリティ */}
+      <div className="max-w-2xl mx-auto mt-8 bg-gray-50 p-6 rounded-lg">
+        <h2 className="text-xl font-semibold mb-4">ご予約に関する注意事項</h2>
+        <div className="space-y-3 text-gray-600">
+          <p>・予約フォーム送信後、自動返信メールが届きます。</p>
+          <p>・自動返信メールが届かない場合は、予約が完了していない可能性がございます。</p>
+          <p>・当日のキャンセルは、次回のご予約をお受けできない場合がございます。</p>
+          <p>・施術開始時間の5分前までにお越しください。</p>
         </div>
 
-        <div className="mb-4">
-          <Label htmlFor="email">メールアドレス</Label>
-          <Input type="email" id="email" required />
-        </div>
+        {/* 連絡先情報セクション - セマンティックな構造化 */}
+        <section className="mt-6 pt-6 border-t border-gray-200">
+          <h3 className="font-semibold mb-2">お問い合わせ先</h3>
+          <div className="space-y-2 text-gray-600">
+            <p>電話番号：XXX-XXXX-XXXX</p>
+            <p>営業時間：9:00-22:00</p>
+            <p>定休日：水曜日</p>
+            <p>住所：XXX県XXX市XXX町X-X-X</p>
+          </div>
+        </section>
 
-        <div className="mb-4">
-          <Label htmlFor="phone">電話番号</Label>
-          <Input type="tel" id="phone" required />
-        </div>
-
-        {/* コース選択セクション */}
-        <div className="mb-4">
-          <Label>希望メニュー</Label>
-          <Select value={selectedService} onValueChange={setSelectedService}>
-            <SelectTrigger className="w-full">
-              <SelectValue placeholder="コースを選択してください" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="acupuncture">眼精疲労コース</SelectItem>
-              <SelectItem value="massage">腰痛肩こりコース</SelectItem>
-              <SelectItem value="fascia">不眠リラックスコース</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
-        {/* 日付選択セクション */}
-        <div className="mb-4">
-          <Label>希望日</Label>
-          <Calendar
-            mode="single"
-            selected={date}
-            onSelect={setDate}
-            className="rounded-md border"
-          />
-        </div>
-
-        {/* 時間選択セクション */}
-        <div className="mb-4">
-          <Label>希望時間</Label>
-          <Select value={selectedTime} onValueChange={setSelectedTime}>
-            <SelectTrigger className="w-full">
-              <SelectValue placeholder="時間を選択してください" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="09:00">09:00</SelectItem>
-              <SelectItem value="10:00">10:00</SelectItem>
-              <SelectItem value="11:00">11:00</SelectItem>
-              <SelectItem value="12:00">12:00</SelectItem>
-              <SelectItem value="13:00">13:00</SelectItem>
-              <SelectItem value="14:00">14:00</SelectItem>
-              <SelectItem value="15:00">15:00</SelectItem>
-              <SelectItem value="16:00">16:00</SelectItem>
-              <SelectItem value="17:00">17:00</SelectItem>
-              <SelectItem value="18:00">18:00</SelectItem>
-              <SelectItem value="19:00">19:00</SelectItem>
-              <SelectItem value="20:00">20:00</SelectItem>
-              <SelectItem value="21:00">21:00</SelectItem>
-              <SelectItem value="22:00">22:00</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
-        {/* 利用規約同意セクション */}
-        <div className="mb-4 flex items-center">
-          <Checkbox
-            id="agreement"
-            checked={agreed}
-            onCheckedChange={(checked) => setAgreed(checked as boolean)}
-          />
-          <Label htmlFor="agreement" className="ml-2">
-            <a href="/terms" className="text-blue-600 hover:underline">
-              利用規約
-            </a>
-            に同意します
-          </Label>
-        </div>
-
-        {/* 送信ボタン - 規約同意時のみ有効 */}
-        <Button type="submit" disabled={!agreed} className="w-full">
-          予約する
-        </Button>
-      </form>
+        {/* 緊急連絡セクション - 視覚的な強調と重要性の表現 */}
+        <section className="mt-6 pt-6 border-t border-gray-200">
+          <p className="text-red-600 font-medium">
+            ※当日のキャンセルや急な変更が必要な場合は、
+            必ずお電話にてご連絡ください。
+          </p>
+        </section>
+      </div>
     </div>
   )
 }
