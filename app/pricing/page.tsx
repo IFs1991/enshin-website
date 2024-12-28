@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 
 const courses = [
   { name: '眼精疲労コース', duration: '60分', price: 20000 },
@@ -34,13 +33,7 @@ const PricingPage = () => {
       <div className="bg-white rounded-lg shadow-md p-6 mb-8">
         <h2 className="text-xl font-semibold mb-4">お支払い方法</h2>
         <p className="mb-4">クレジットカード決済のみとなります。</p>
-        <div className="flex space-x-4">
-          <Image src="/placeholder.svg" alt="Visa" width={50} height={30} />
-          <Image src="/placeholder.svg" alt="Mastercard" width={50} height={30} />
-          <Image src="/placeholder.svg" alt="American Express" width={50} height={30} />
-          <Image src="/placeholder.svg" alt="Diners Club" width={50} height={30} />
-          <Image src="/placeholder.svg" alt="JCB" width={50} height={30} />
-        </div>
+        <p>（VISA, Mastercard, American Express, Diners Club, JCB）</p>
       </div>
       <div className="bg-white rounded-lg shadow-md p-6">
         <h2 className="text-xl font-semibold mb-4">キャンセルポリシー</h2>

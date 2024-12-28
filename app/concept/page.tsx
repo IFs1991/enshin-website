@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 
 // 共通のセクションコンポーネント
 interface SectionProps {
@@ -24,7 +23,6 @@ const ConceptPage: React.FC = () => {
           えん鍼は、「エンジニアのパフォーマンスを最大化する」というコンセプトのもと、エンジニアの皆様に特化した鍼灸施術サービスを提供しています。
           長時間のデスクワークや集中作業によって蓄積される身体的・精神的な疲労を解消し、クリエイティブな仕事に必要な集中力と生産性を高めることを目指しています。
         </p>
-        <Image src="/placeholder.svg" alt="えん鍼のコンセプト図" width={600} height={400} className="rounded-lg mb-4" />
       </Section>
 
       <Section title="えん鍼の由来">
