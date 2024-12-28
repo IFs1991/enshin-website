@@ -54,7 +54,7 @@ const NFTPage = () => {
       <div className="bg-white dark:bg-dark-surface rounded-lg shadow-md p-6 mb-8">
         <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-dark-text">NFT保有者特典</h2>
         <ul className="list-disc list-inside mb-4 text-gray-600 dark:text-dark-text-muted">
-          <li>限定イ���ントへの参加権</li>
+          <li>限定イベントへの参加権</li>
           <li>えん鍼施術の優先予約権</li>
           <li>えん鍼コミュニティへのアクセス権</li>
           <li>特別な健康情報や技術情報の提供</li>
