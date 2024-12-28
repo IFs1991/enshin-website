@@ -37,7 +37,7 @@ const NFTPage = () => {
         <div className="mb-6">
           <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-dark-text">エンジニアの魂を宿すデジタル証明</h3>
           <p className="text-gray-600 dark:text-dark-text-muted">
-            コードがGitHubに刻まれるように、施術体験はNFTに刻まれます。これは単なる記録��はなく、自己投資の証であり、
+            コードがGitHubに刻まれるように、施術体験はNFTに刻まれます。これは単なる記録はなく、自己投資の証であり、
             技術者としてのアイデンティティを表現するものです。えん鍼のNFTは、あなたが自身の健康とパフォーマンス向上に
             真剣に取り組んでいることを示す、デジタル時代の勲章とも言えるでしょう。
           </p>
@@ -54,7 +54,7 @@ const NFTPage = () => {
       <div className="bg-white dark:bg-dark-surface rounded-lg shadow-md p-6 mb-8">
         <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-dark-text">NFT保有者特典</h2>
         <ul className="list-disc list-inside mb-4 text-gray-600 dark:text-dark-text-muted">
-          <li>限定イベントへの参加権</li>
+          <li>限定イ���ントへの参加権</li>
           <li>えん鍼施術の優先予約権</li>
           <li>えん鍼コミュニティへのアクセス権</li>
           <li>特別な健康情報や技術情報の提供</li>
@@ -72,10 +72,13 @@ const NFTPage = () => {
           <li>健康管理や生産性向上に関するディスカッション</li>
           <li>最新技術トレンドの共有と議論</li>
           <li>メンバー同士のネットワーキング</li>
-          <li>「BONSAI NFT CLUB」との交流イベント</li>
+          <li>芸術や文化に触れる機会の提供</li>
+          <li>教養を深めるための読書会や勉強会</li>
         </ul>
         <p className="text-gray-600 dark:text-dark-text-muted">
           えん鍼NFTコミュニティは、単なる施術サービスの枠を超え、エンジニアの皆様の成長と繋がりを支援する場を提供します。
+          また、芸術や教養を通じて、技術者としての創造性や感性を磨く機会も提供していく予定です。
+          東洋医学の知恵と現代のテクノロジー、そして芸術文化が融合する独自のコミュニティを目指しています。
         </p>
       </div>
     </div>
