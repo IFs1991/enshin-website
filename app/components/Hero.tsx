@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 const Hero = () => {
   return (
-    <section className="relative bg-gray-50 overflow-hidden">
-      <div className="container mx-auto px-6 py-16 text-center">
+    <section className="relative bg-white overflow-hidden">
+      <div className="container mx-auto px-6 py-16 text-center relative z-10">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-900">えん鍼 -Enshin-</h1>
         <p className="text-xl md:text-2xl text-gray-600 mb-8">エンジニアのパフォーマンスを最大化する鍼灸施術サービス</p>
         <div className="relative w-full max-w-4xl mx-auto mb-12 rounded-lg overflow-hidden shadow-2xl">
@@ -14,7 +14,7 @@ const Hero = () => {
           予約する
         </Link>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-purple-100 opacity-50 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-20 z-0"></div>
     </section>
   )
 }
