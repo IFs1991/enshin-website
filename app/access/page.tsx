@@ -7,19 +7,7 @@ const AccessPage = () => {
       <div className="bg-white rounded-lg shadow-md p-6 mb-8">
         <h2 className="text-2xl font-semibold mb-4">店舗情報</h2>
         <p><strong>店舗名:</strong> えん鍼 -Enshin-</p>
-        <p><strong>住所:</strong> 〒123-4567 東京都渋谷区○○町1-2-3 ○○ビル4F</p>
-        <p><strong>電話番号:</strong> 03-1234-5678</p>
         <p><strong>営業時間:</strong> 10:00 - 20:00</p>
-        <p><strong>定休日:</strong> 水曜日</p>
-      </div>
-      <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-        <h2 className="text-2xl font-semibold mb-4">アクセス方法</h2>
-        <h3 className="text-xl font-semibold mb-2">電車でお越しの場合</h3>
-        <p className="mb-4">○○線 △△駅 A出口から徒歩5分</p>
-        <h3 className="text-xl font-semibold mb-2">バスでお越しの場合</h3>
-        <p className="mb-4">○○バス停から徒歩2分</p>
-        <h3 className="text-xl font-semibold mb-2">お車でお越しの場合</h3>
-        <p className="mb-4">近隣のコインパーキングをご利用ください。</p>
       </div>
       <div className="bg-white rounded-lg shadow-md p-6 mb-8">
         <h2 className="text-2xl font-semibold mb-4">地図</h2>
@@ -33,13 +21,6 @@ const AccessPage = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
-        </div>
-      </div>
-      <div className="bg-white rounded-lg shadow-md p-6">
-        <h2 className="text-2xl font-semibold mb-4">外観・入口</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Image src="/placeholder.svg" alt="店舗外観" width={400} height={300} className="rounded-lg" />
-          <Image src="/placeholder.svg" alt="店舗入口" width={400} height={300} className="rounded-lg" />
         </div>
       </div>
     </div>
