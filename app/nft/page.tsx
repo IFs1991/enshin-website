@@ -9,7 +9,7 @@ const NFTPage = () => {
       <div className="bg-white dark:bg-dark-surface rounded-lg shadow-md p-6 mb-8">
         <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-dark-text">えん鍼NFTの概要</h2>
         <div className="flex flex-col md:flex-row items-center mb-4">
-          <Image src="/placeholder.svg" alt="えん鍼NFTデザイン" width={300} height={300} className="rounded-lg mb-4 md:mb-0 md:mr-4" />
+          <Image src="/images/nft/nft-design.jpg" alt="えん鍼NFTデザイン" width={300} height={300} className="rounded-lg mb-4 md:mb-0 md:mr-4" />
           <div>
             <p className="mb-2 text-gray-700 dark:text-dark-text"><strong>発行数:</strong> 200個</p>
             <p className="mb-2 text-gray-700 dark:text-dark-text"><strong>コントラクトアドレス:</strong> 0x1234...5678</p>
@@ -37,7 +37,7 @@ const NFTPage = () => {
         <div className="mb-6">
           <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-dark-text">エンジニアの魂を宿すデジタル証明</h3>
           <p className="text-gray-600 dark:text-dark-text-muted">
-            コードがGitHubに刻まれるように、施術体験はNFTに刻まれます。これは単なる記録ではなく、自己投資の証であり、
+            コードがGitHubに刻まれるように、施術体験はNFTに刻まれます。これは単なる記録��はなく、自己投資の証であり、
             技術者としてのアイデンティティを表現するものです。えん鍼のNFTは、あなたが自身の健康とパフォーマンス向上に
             真剣に取り組んでいることを示す、デジタル時代の勲章とも言えるでしょう。
           </p>

@@ -6,11 +6,11 @@ const FounderPage = () => {
       <h1 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-dark-text">創設者紹介</h1>
       <div className="bg-white dark:bg-dark-surface rounded-lg shadow-md p-6 mb-8">
         <div className="flex flex-col md:flex-row items-center">
-          <Image 
-            src="/placeholder.svg" 
-            alt="岩沢太の写真" 
-            width={300} 
-            height={300} 
+          <Image
+            src="/images/founder/iwasawa-photo.jpg"
+            alt="岩沢太の写真"
+            width={300}
+            height={300}
             className="rounded-lg mb-4 md:mb-0 md:mr-8"
           />
           <div>
@@ -21,7 +21,7 @@ const FounderPage = () => {
               帰国後、生成AIの可能性に感銘を受け、縁あってスタートアップの世界へ。そこでエンジニアの皆様と交流を深める中で、
               長時間労働やハードな開発業務による身体的な負担を目の当たりにしました。私自身もプログラミングを学ぶ中で、
               肩や目の疲れといったエンジニア特有の悩みを実感するようになりました。鍼灸師として、この状況をなんとかしたい、
-              エンジニアの皆様が心身ともに健康で、最高のパフォーマンスを発揮できる環境を作りたい、その想いから「えん鍼」を開院するに至りました。
+              エンジニアの皆様が心身ともに健康で、最高のパフォーマンスを発揮できる��境を作りたい、その想いから「えん鍼」を開院するに至りました。
             </p>
           </div>
         </div>
@@ -36,7 +36,7 @@ const FounderPage = () => {
         </p>
         <p className="text-gray-700 dark:text-dark-text mb-4">
           「えん鍼」では、単に不調を改善するだけでなく、鍼灸を通じてエンジニア本来のパフォーマンスを引き出すことを目指します。
-          エンジニアの皆様が健康で、情熱を持って仕事に取り組めるよう、全力でサポートさせていただきます。
+          エンジニアの��様が健康で、情熱を持って仕事に取り組めるよう、全力でサポートさせていただきます。
         </p>
       </div>
       <div className="bg-white dark:bg-dark-surface rounded-lg shadow-md p-6">
